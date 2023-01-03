@@ -1,0 +1,10 @@
+-------------------------------------------------------------------------------
+Test set: helpers.TestRunner
+-------------------------------------------------------------------------------
+Tests run: 8, Failures: 0, Errors: 2, Skipped: 6, Time elapsed: 2.882 s <<< FAILURE! - in helpers.TestRunner
+Scenario: TC001 - User login with correct credential  Time elapsed: 1.072 s  <<< ERROR!
+java.lang.AbstractMethodError: org.openqa.selenium.remote.service.DriverService$Builder.createArgs()Ljava/util/List;
+
+Scenario: TC001 - User login with correct credential  Time elapsed: 1.509 s  <<< ERROR!
+java.lang.NullPointerException
+

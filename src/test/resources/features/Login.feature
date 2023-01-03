@@ -20,8 +20,8 @@ Feature: Login Scenarios
     And user click Login button
     Then warning message appear "<message>"
     Examples:
-      | username      | password      | message                                                                   |
-      |               |               | Epic sadface: Username is required                                        |
-      | standard_user |               | Epic sadface: Password is required                                        |
-      |               | secret_sauce  | Epic sadface: Username is required                                        |
-      | standarduser  | secretsauce   | Epic sadface: Username and password do not match any user in this service |
+      | username      | password      | message                                                                     |
+      |               |               | Username is required                                                        |
+      | standard_user |               | Password is required                                                        |
+      |               | secret_sauce  | Username is required                                                        |
+      | standarduser  | secretsauce   | Epic sadface: Username and password do not match any user in this service.  |

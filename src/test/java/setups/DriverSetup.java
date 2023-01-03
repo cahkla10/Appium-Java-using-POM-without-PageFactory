@@ -9,18 +9,17 @@ import io.appium.java_client.service.local.AppiumDriverLocalService;
 import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
-import java.sql.SQLOutput;
 
 public class DriverSetup extends DriverPool{
     private AppiumDriverLocalService service;
 
-    protected void setDriver() throws MalformedURLException {
+    protected void setDriver() throws IOException, DeviceNotFoundException {
         switch (System.getProperty("device")){
             case "android":
                 Capabilities capabilities = new Capabilities();
                 AppiumDriver driver = new AndroidDriver(new URL(GlobalVariables.APPIUMURL), capabilities.android());
                 setDriverInstance(driver);
-                System.out.println("Driver: " + driver + "is running!");
+                System.out.println("Driver: " + driver + " is running!");
                 break;
             /*
             case "ios":
@@ -33,12 +32,12 @@ public class DriverSetup extends DriverPool{
         service = AppiumDriverLocalService.buildDefaultService();
         service.start();
         String service_url = service.getUrl().toString();
-        System.out.println("Appium Service: " + service_url + "is running!");
+        System.out.println("Appium Service: " + service_url + " is running!");
     }
 
     protected void stopAppium(){
-        service.stop();
         String service_url = service.getUrl().toString();
-        System.out.println("Appium Service: " + service_url + "is stopped!");
+        System.out.println("Appium Service: " + service_url + " is stopped!");
+        service.stop();
     }
 }

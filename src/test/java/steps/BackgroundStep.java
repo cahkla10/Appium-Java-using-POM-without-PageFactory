@@ -8,12 +8,12 @@ public class BackgroundStep {
     LoginPage loginPage = new LoginPage();
 
     @Given("^user launch the Sauce Demo app$")
-    public void userLaunchTheSauceDemoApp() throws Throwable {
+    public void userLaunchTheSauceDemoApp() {
 
     }
 
     @Then("^Sauce Demo app will displayed$")
-    public void sauceDemoAppWillDisplayed() throws Throwable {
-
+    public void sauceDemoAppWillDisplayed() {
+        loginPage.seeBotImg();
     }
 }
