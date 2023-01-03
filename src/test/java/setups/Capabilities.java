@@ -1,6 +1,5 @@
 package setups;
 
-import com.sun.scenario.effect.impl.sw.sse.SSEBlend_SRC_OUTPeer;
 import com.testinium.deviceinformation.DeviceInfo;
 import com.testinium.deviceinformation.DeviceInfoImpl;
 import com.testinium.deviceinformation.device.DeviceType;
@@ -13,27 +12,33 @@ import java.io.IOException;
 
 public class Capabilities {
 
-    public DesiredCapabilities android() throws IOException, DeviceNotFoundException {
+    public DesiredCapabilities android() {
         DesiredCapabilities androidCapabilities = new DesiredCapabilities();
-        DeviceInfo deviceInfo = new DeviceInfoImpl(DeviceType.ALL);
-        Device device = deviceInfo.getFirstDevice();
+//        DeviceInfo deviceInfo = new DeviceInfoImpl(DeviceType.ANDROID);
+//
+//        Device device = deviceInfo.getFirstDevice();
 
-        System.out.println("=======CAPABILITIES========");
-        System.out.println("Platform Name: " + device.getDeviceProductName());
-        System.out.println("Platform Version: " + device.getProductVersion());
-        System.out.println("Device Name: " + device.getModelNumber());
-        System.out.println("App Path: " + GlobalVariables.USERDIR + "/src/test/resources/app/AndroidSauceLabs.apk");
+//        System.out.println("======= DEVICE INFO ========");
+//        System.out.println("Platform Name: " + device.getDeviceProductName());
+//        System.out.println("Platform Version: " + device.getProductVersion());
+//        System.out.println("Device Name: " + device.getModelNumber());
+//        System.out.println("Device UDID: " + device.getUniqueDeviceID());
+//        System.out.println("App Path: " + GlobalVariables.USERDIR + "/src/test/resources/app/AndroidSauceLabs.apk");
+//
+//
+//        androidCapabilities.setCapability("platformName", device.getDeviceProductName());
+//        androidCapabilities.setCapability("platformVersion", device.getProductVersion());
+//        androidCapabilities.setCapability("deviceName", device.getUniqueDeviceID());
+//        androidCapabilities.setCapability("udid", device.getUniqueDeviceID());
 
-
-        androidCapabilities.setCapability("platformName", device.getDeviceProductName()); //OS which tested
-        androidCapabilities.setCapability("platformVersion", device.getProductVersion()); //Android version
-        androidCapabilities.setCapability("deviceName", "emulator-5554"); //device serial number
+        androidCapabilities.setCapability("platformName", "Android");
+        androidCapabilities.setCapability("platformVersion", "9");
+        androidCapabilities.setCapability("deviceName", "emulator-5554");
         androidCapabilities.setCapability("app", GlobalVariables.USERDIR + "/src/test/resources/app/AndroidSauceLabs.apk");
-        androidCapabilities.setCapability("appPackage", "com.swaglabsmobileapp"); //apk package (can get from inspector)
-        androidCapabilities.setCapability("clearSystemFiles", "true"); //option for caching files
-        androidCapabilities.setCapability("noReset", "false"); //option for app will not reseting
-        androidCapabilities.setCapability("appWaitActivity","*"); //option for run in first activity
-        androidCapabilities.setCapability("autoGrantPermissions","true"); //option for auto Allow in each of permission pop up
+        androidCapabilities.setCapability("appPackage", "com.swaglabsmobileapp");
+        androidCapabilities.setCapability("appActivity","com.swaglabsmobileapp.MainActivity");
+        androidCapabilities.setCapability("autoGrantPermissions","true");
+        androidCapabilities.setCapability("clearSystemFiles", "true");
 
         return androidCapabilities;
     }

@@ -1,26 +1,25 @@
 package setups;
 
-import com.sun.scenario.effect.impl.sw.sse.SSEBlend_SRC_OUTPeer;
 import com.testinium.deviceinformation.exception.DeviceNotFoundException;
 import cucumber.api.java.After;
 import cucumber.api.java.Before;
 
 import java.io.IOException;
+import java.net.MalformedURLException;
 
 public class Hook extends DriverSetup{
     Capabilities capabilities = new Capabilities();
 
     @Before
-    public void startDriver() throws IOException, DeviceNotFoundException {
+    public void before() throws MalformedURLException {
         System.setProperty("device", "android");
-        capabilities.android();
+//        startAppium();
         setDriver();
-        startAppium();
     }
 
     @After
-    public void stopDriver(){
+    public void after(){
         getDriverInstance().quit();
-        stopAppium();
+//        stopAppium();
     }
 }
