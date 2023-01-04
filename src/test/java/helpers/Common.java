@@ -14,7 +14,7 @@ import setups.DriverPool;
 import java.util.List;
 
 public class Common {
-    WebDriverWait wait = new WebDriverWait(DriverPool.getDriverInstance(), 60);
+    WebDriverWait wait = new WebDriverWait(DriverPool.getDriverInstance(), GlobalVariables.TIMEOUT);
 
     public void delay(int delay) throws InterruptedException {
         Thread.sleep(delay);
