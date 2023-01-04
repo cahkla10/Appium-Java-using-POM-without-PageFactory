@@ -17,7 +17,7 @@ public class DriverSetup extends DriverPool{
         switch (System.getProperty("device")){
             case "android":
                 Capabilities capabilities = new Capabilities();
-                AppiumDriver driver = new AndroidDriver(new URL(GlobalVariables.APPIUMURL), capabilities.android());
+                AppiumDriver driver = new AndroidDriver(capabilities.android());
                 setDriverInstance(driver);
                 System.out.println("Driver: " + driver + " is running!");
                 break;
