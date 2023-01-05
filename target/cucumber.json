@@ -1,0 +1,755 @@
+[
+  {
+    "line": 2,
+    "elements": [
+      {
+        "line": 5,
+        "name": "User launch the AUT",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 159235600,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "user launch the Sauce Demo app",
+            "match": {
+              "location": "BackgroundStep.userLaunchTheSauceDemoApp()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 2024634100,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "Sauce Demo app will displayed",
+            "match": {
+              "location": "BackgroundStep.sauceDemoAppWillDisplayed()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 21844887000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hook.before()"
+            }
+          }
+        ],
+        "line": 10,
+        "name": "TC001 - User login with correct credential",
+        "description": "",
+        "id": "login-scenarios;tc001---user-login-with-correct-credential",
+        "after": [
+          {
+            "result": {
+              "duration": 741971200,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hook.after()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 974670900,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "user input username \"standard_user\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "standard_user",
+                  "offset": 21
+                }
+              ],
+              "location": "LoginStep.userInputUsername(String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 2004798800,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "user input password \"secret_sauce\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "secret_sauce",
+                  "offset": 21
+                }
+              ],
+              "location": "LoginStep.userInputPassword(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 712012900,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "user click Login button",
+            "match": {
+              "location": "LoginStep.userClickLoginButton()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1595931500,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "user redirected to \"PRODUCTS\" page",
+            "match": {
+              "arguments": [
+                {
+                  "val": "PRODUCTS",
+                  "offset": 20
+                }
+              ],
+              "location": "LoginStep.userRedirectedToProductPage(String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 9,
+            "name": "@TC001"
+          }
+        ]
+      },
+      {
+        "line": 5,
+        "name": "User launch the AUT",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 110400,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "user launch the Sauce Demo app",
+            "match": {
+              "location": "BackgroundStep.userLaunchTheSauceDemoApp()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 2250427800,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "Sauce Demo app will displayed",
+            "match": {
+              "location": "BackgroundStep.sauceDemoAppWillDisplayed()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 21598294100,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hook.before()"
+            }
+          }
+        ],
+        "line": 24,
+        "name": "TC002 - User login with incorrect credentials",
+        "description": "",
+        "id": "login-scenarios;tc002---user-login-with-incorrect-credentials;;2",
+        "after": [
+          {
+            "result": {
+              "duration": 900849300,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hook.after()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 1464386400,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "user input username \"\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "",
+                  "offset": 21
+                }
+              ],
+              "location": "LoginStep.userInputUsername(String)"
+            },
+            "matchedColumns": [
+              0
+            ],
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 2297492600,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "user input password \"\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "",
+                  "offset": 21
+                }
+              ],
+              "location": "LoginStep.userInputPassword(String)"
+            },
+            "matchedColumns": [
+              1
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 663525500,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "user click Login button",
+            "match": {
+              "location": "LoginStep.userClickLoginButton()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 872672400,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "warning message appear \"Username is required\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Username is required",
+                  "offset": 24
+                }
+              ],
+              "location": "LoginStep.warningMessageAppear(String)"
+            },
+            "matchedColumns": [
+              2
+            ],
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 1,
+            "name": "@Login"
+          },
+          {
+            "line": 16,
+            "name": "@TC002"
+          }
+        ]
+      },
+      {
+        "line": 5,
+        "name": "User launch the AUT",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 80300,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "user launch the Sauce Demo app",
+            "match": {
+              "location": "BackgroundStep.userLaunchTheSauceDemoApp()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 3193977200,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "Sauce Demo app will displayed",
+            "match": {
+              "location": "BackgroundStep.sauceDemoAppWillDisplayed()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 28166185000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hook.before()"
+            }
+          }
+        ],
+        "line": 25,
+        "name": "TC002 - User login with incorrect credentials",
+        "description": "",
+        "id": "login-scenarios;tc002---user-login-with-incorrect-credentials;;3",
+        "after": [
+          {
+            "result": {
+              "duration": 997735700,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hook.after()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 884682400,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "user input username \"standard_user\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "standard_user",
+                  "offset": 21
+                }
+              ],
+              "location": "LoginStep.userInputUsername(String)"
+            },
+            "matchedColumns": [
+              0
+            ],
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1471129100,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "user input password \"\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "",
+                  "offset": 21
+                }
+              ],
+              "location": "LoginStep.userInputPassword(String)"
+            },
+            "matchedColumns": [
+              1
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 820023400,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "user click Login button",
+            "match": {
+              "location": "LoginStep.userClickLoginButton()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 760927100,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "warning message appear \"Password is required\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Password is required",
+                  "offset": 24
+                }
+              ],
+              "location": "LoginStep.warningMessageAppear(String)"
+            },
+            "matchedColumns": [
+              2
+            ],
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 1,
+            "name": "@Login"
+          },
+          {
+            "line": 16,
+            "name": "@TC002"
+          }
+        ]
+      },
+      {
+        "line": 5,
+        "name": "User launch the AUT",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 86400,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "user launch the Sauce Demo app",
+            "match": {
+              "location": "BackgroundStep.userLaunchTheSauceDemoApp()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 3161801300,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "Sauce Demo app will displayed",
+            "match": {
+              "location": "BackgroundStep.sauceDemoAppWillDisplayed()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 26998736800,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hook.before()"
+            }
+          }
+        ],
+        "line": 26,
+        "name": "TC002 - User login with incorrect credentials",
+        "description": "",
+        "id": "login-scenarios;tc002---user-login-with-incorrect-credentials;;4",
+        "after": [
+          {
+            "result": {
+              "duration": 1127926400,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hook.after()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 845424300,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "user input username \"\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "",
+                  "offset": 21
+                }
+              ],
+              "location": "LoginStep.userInputUsername(String)"
+            },
+            "matchedColumns": [
+              0
+            ],
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1873933500,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "user input password \"secret_sauce\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "secret_sauce",
+                  "offset": 21
+                }
+              ],
+              "location": "LoginStep.userInputPassword(String)"
+            },
+            "matchedColumns": [
+              1
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 745582800,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "user click Login button",
+            "match": {
+              "location": "LoginStep.userClickLoginButton()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 866473900,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "warning message appear \"Username is required\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Username is required",
+                  "offset": 24
+                }
+              ],
+              "location": "LoginStep.warningMessageAppear(String)"
+            },
+            "matchedColumns": [
+              2
+            ],
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 1,
+            "name": "@Login"
+          },
+          {
+            "line": 16,
+            "name": "@TC002"
+          }
+        ]
+      },
+      {
+        "line": 5,
+        "name": "User launch the AUT",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 83100,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "user launch the Sauce Demo app",
+            "match": {
+              "location": "BackgroundStep.userLaunchTheSauceDemoApp()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 3442544900,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "Sauce Demo app will displayed",
+            "match": {
+              "location": "BackgroundStep.sauceDemoAppWillDisplayed()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 29838939200,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hook.before()"
+            }
+          }
+        ],
+        "line": 27,
+        "name": "TC002 - User login with incorrect credentials",
+        "description": "",
+        "id": "login-scenarios;tc002---user-login-with-incorrect-credentials;;5",
+        "after": [
+          {
+            "result": {
+              "duration": 921216800,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hook.after()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 1450956500,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "user input username \"standarduser\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "standarduser",
+                  "offset": 21
+                }
+              ],
+              "location": "LoginStep.userInputUsername(String)"
+            },
+            "matchedColumns": [
+              0
+            ],
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1430415400,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "user input password \"secretsauce\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "secretsauce",
+                  "offset": 21
+                }
+              ],
+              "location": "LoginStep.userInputPassword(String)"
+            },
+            "matchedColumns": [
+              1
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 755054100,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "user click Login button",
+            "match": {
+              "location": "LoginStep.userClickLoginButton()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 879903600,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "warning message appear \"Epic sadface: Username and password do not match any user in this service.\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Epic sadface: Username and password do not match any user in this service.",
+                  "offset": 24
+                }
+              ],
+              "location": "LoginStep.warningMessageAppear(String)"
+            },
+            "matchedColumns": [
+              2
+            ],
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 1,
+            "name": "@Login"
+          },
+          {
+            "line": 16,
+            "name": "@TC002"
+          }
+        ]
+      }
+    ],
+    "name": "Login Scenarios",
+    "description": "This cases is for Login feature which is every case will started with Background first.",
+    "id": "login-scenarios",
+    "keyword": "Feature",
+    "uri": "Login.feature",
+    "tags": [
+      {
+        "line": 1,
+        "name": "@Login"
+      }
+    ]
+  }
+]
