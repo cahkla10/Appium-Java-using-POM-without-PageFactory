@@ -14,20 +14,19 @@ What is Cucumber? What is Gherkin?<br/>
 
 ## 3. Preparation
 
-| Unsur        | Item                                                         |
+| Items        | Remarks                                                         |
 | ------------ | ------------------------------------------------------------ |
 | Editor       | Intellij IDEA Community (https://www.jetbrains.com/idea/download/#section=windows) |
 | JDK          | JDK 8 (https://www.oracle.com/java/technologies/javase/javase-jdk8-downloads.html) |
 | SDK          | Android SDK (https://developer.android.com/studio/archive)   |
 | Tools        | Node.js (https://nodejs.org/dist/latest/)                    |
-| Device       | Real device or emulator                                      |
-| Dependencies | artifactId: `selenium-java`, groupId: `org.seleniumhq.selenium` <br />artifactId: `selenium-api`, groupId: `org.seleniumhq.selenium`<br />artifactId: `cucumber-junit`, groupId: `info.cukes`<br />artifactId: `cucumber-java`, groupId: `info.cukes`<br />artifactId: `cucumber-core`, groupId: `info.cukes`<br />artifactId: `gherkin`, groupId: `info.cukes`<br />artifactId: `java-client`, groupId: `io-appium`<br />artifactId: `testng`, groupId: `org.testng` |
+| Device       | Real device/emulator/simulator                                      |
 
 ## 4. Installation
 
 #### General
 
-Install Editor Intellij Idea Community, SDK, Tools, and JDK in komputer.
+Install Editor Intellij Idea Community, SDK, Tools, and JDK.
 
 #### Appium
 
@@ -88,7 +87,7 @@ Install Editor Intellij Idea Community, SDK, Tools, and JDK in komputer.
 
 #### Clone
 
-Clone this repository using this command `git clone https://github.com/cahkla10/Appium-Java-using-POM` in terminal or command prompt.
+Clone this repository through terminal or command prompt.
 
 #### Intellij IDEA Configuration
 
