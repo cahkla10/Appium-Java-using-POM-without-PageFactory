@@ -1,4 +1,4 @@
-# Appium-Java-using-POM-without-PageFactory
+# Appium-Java-using-PageObjectModel-without-PageFactory
 Android automation testing using Appium, Cucumber, Java, and design pattern Page Object Model (POM) without Page Factory.
 
 ## 1. POM
