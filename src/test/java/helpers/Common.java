@@ -17,72 +17,27 @@ public class Common {
         Thread.sleep(delay);
     }
 
-    public void clearId(String element){
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.id(element))).clear();
+    public void clear(MobileBy element){
+        wait.until(ExpectedConditions.visibilityOfElementLocated(element)).clear();
     }
 
-    public void clearXpath(String element){
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(element))).clear();
+    public void click(MobileBy element){
+        wait.until(ExpectedConditions.visibilityOfElementLocated(element)).click();
     }
 
-    public void clearAccssId(String element){
-        wait.until(ExpectedConditions.visibilityOfElementLocated(MobileBy.AccessibilityId(element))).clear();
+    public void sendKeys(MobileBy element, String text){
+        wait.until(ExpectedConditions.visibilityOfElementLocated(element)).sendKeys(text);
     }
 
-    public void clickId(String element){
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.id(element))).click();
-    }
-
-    public void clickXpath(String element){
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(element))).click();
-    }
-
-    public void clickAccssId(String element){
-        wait.until(ExpectedConditions.visibilityOfElementLocated(MobileBy.AccessibilityId(element))).click();
-    }
-
-    public void sendKeysId(String element, String text){
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.id(element))).sendKeys(text);
-    }
-
-    public void sendKeysXpath(String element, String text){
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(element))).sendKeys(text);
-    }
-
-    public void sendKeysAccssId(String element, String text){
-        wait.until(ExpectedConditions.visibilityOfElementLocated(MobileBy.AccessibilityId(element))).sendKeys(text);
-    }
-
-    public void findIdAndRead(String element, String outputText){
-        List<WebElement> list = wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.id(element)));
+    public void findAndRead(By element, String outputText){
+        List<WebElement> list = wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(element));
         if(list.size() >= 1){
             System.out.println(outputText);
         }
     }
 
-    public void findXpathAndRead(String element, String outputText){
-        List<WebElement> list = wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath(element)));
-        if(list.size() >= 1){
-            System.out.println(outputText);
-        }
-    }
-
-    public void findAccssIdAndRead(String element, String outputText){
-        List<WebElement> list = wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(MobileBy.AccessibilityId(element)));
-        if(list.size() >= 1){
-            System.out.println(outputText);
-        }
-    }
-
-    public void findClassAndRead(String element, String outputText){
-        List<WebElement> list = wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(MobileBy.className(element)));
-        if(list.size() >= 1){
-            System.out.println(outputText);
-        }
-    }
-
-    public void findIdAndClick(String element, String text){
-        List<WebElement> list = wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.id(element)));
+    public void findAndClick(MobileBy element, String text){
+        List<WebElement> list = wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(element));
         for(WebElement aList : list){
             if(aList.getText().contains(text)){
                 aList.click();
@@ -91,42 +46,8 @@ public class Common {
         }
     }
 
-    public void findXpathAndClick(String element, String text){
-        List<WebElement> list = wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath(element)));
-        for(WebElement aList : list){
-            if(aList.getText().contains(text)){
-                aList.click();
-                break;
-            }
-        }
-    }
-
-    public void findAccssIdAndClick(String element, String text){
-        List<WebElement> list = wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(MobileBy.AccessibilityId(element)));
-        for(WebElement aList : list){
-            if(aList.getText().contains(text)){
-                aList.click();
-                break;
-            }
-        }
-    }
-
-    public void verifyXpathText(String element, String expected) {
-        List<WebElement> list = wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath(element)));
-        if(list.size() >= 1){
-            assertEquals(expected,list.get(0).getText());
-        }
-    }
-
-    public void verifyIdText(String element, String expected) {
-        List<WebElement> list = wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.id(element)));
-        if(list.size() >= 1){
-            assertEquals(expected,list.get(0).getText());
-        }
-    }
-
-    public void verifyAccssIdText(String element, String expected) {
-        List<WebElement> list = wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(MobileBy.AccessibilityId(element)));
+    public void verifyText(By element, String expected) {
+        List<WebElement> list = wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(element));
         if(list.size() >= 1){
             assertEquals(expected,list.get(0).getText());
         }
