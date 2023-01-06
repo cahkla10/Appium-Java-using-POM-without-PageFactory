@@ -49,6 +49,7 @@ public class Common {
     public void verifyText(By element, String expected) {
         List<WebElement> list = wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(element));
         if(list.size() > 0){
+            System.out.println("Expected: " + expected);
             assertEquals(expected,list.get(0).getText());
         }
     }
