@@ -1,35 +1,37 @@
 package pages;
 
 import helpers.Common;
+import io.appium.java_client.MobileBy;
+import org.openqa.selenium.By;
 
 public class LoginPage {
-    private String usernameField = "test-Username";
-    private String passwordField = "test-Password";
-    private String loginBtn = "test-LOGIN";
-    private String errorMessage = "test-Error message";
-    private String botImg = "android.widget.ImageView";
+    private MobileBy usernameField = (MobileBy) MobileBy.AccessibilityId("test-Username");
+    private MobileBy passwordField = (MobileBy) MobileBy.AccessibilityId("test-Password");
+    private MobileBy loginBtn = (MobileBy) MobileBy.AccessibilityId("test-LOGIN");
+    private MobileBy errorMessage = (MobileBy) MobileBy.AccessibilityId("test-Error message");
+    private By botImg = By.className("android.widget.ImageView");
 
     Common common = new Common();
 
     public void seeBotImg(){
-        common.findClassAndRead(botImg, "Bot image is displayed");
+        common.findAndRead(botImg, "Bot image is displayed");
     }
 
     public void inputUsername(String username){
-        common.clearAccssId(usernameField);
-        common.sendKeysAccssId(usernameField, username);
+        common.clear(usernameField);
+        common.sendKeys(usernameField, username);
     }
 
     public void inputPassword(String password){
-        common.clearAccssId(passwordField);
-        common.sendKeysAccssId(passwordField, password);
+        common.clear(passwordField);
+        common.sendKeys(passwordField, password);
     }
 
     public void clickLogin(){
-        common.clickAccssId(loginBtn);
+        common.click(loginBtn);
     }
 
     public void readErrorMessage(String expected){
-        common.findAccssIdAndRead(errorMessage, expected);
+        common.findAndRead(errorMessage, expected);
     }
 }
